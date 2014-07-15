@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+	<head>
+		<title>Rest Api</title>
+	</head>
+
+	<body ng-controller="myAppController">
+		<div ng-repeat="log in logs">
+			{{log.user_id}} {{log.log_data}} {{log.datetime}}
+        </div>
+
+	</body>
+
+	<script src="javascripts/lib.angular.js"></script>
+	<script src="javascripts/app.controller.js"></script>
+
+</html>

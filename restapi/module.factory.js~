@@ -1,0 +1,35 @@
+var Factory = function(Schema,mongoose) {
+
+	this.Schema = Schema;
+	this.mongoose = mongoose;
+	this.Item = null;
+
+	this.createSchemas = function() {
+
+		LogData = new this.Schema({
+			user_id: Number,
+			log_data: String, 
+			datetime: Number
+
+		});
+
+		this.logData = mongoose.model('jivalogData',LogData);
+		//console.log(this.logData)
+	}
+
+	this.insertLogData = function(logdata) {
+
+		var oneLogRec = new this.logData(logdata); 
+		oneLogRec.save();
+		
+	}
+
+	this.getLogData = function(query,res) {
+
+		this.Person.find(query,function(error,output) {
+			res.json(output);
+		});
+	}
+}
+
+module.exports = Factory;
