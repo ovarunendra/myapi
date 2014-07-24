@@ -24,8 +24,7 @@ exports.add = function(req, res) {
 exports.update = function(req, res) {
     var id = req.params.id;
     var updates = req.body;
-
-    Musician.update({"_id":id}, req.body,
+    Musician.update({"_id":id}, updates,
         function (err, numberAffected) {
             if (err) return console.log(err);
             console.log('Updated %d musicians', numberAffected);

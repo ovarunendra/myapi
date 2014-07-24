@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Get All Records</h2>
+
+<form action="http://localhost:5001/musicians" method="get" target="_blank">
+    <input type="submit" value="Get All Records">
+</form>
+
+<h2>Get Record By ID</h2>
+
+<form action="http://localhost:5001/musicians" method="get" target="_blank">
+    ID : <input type="text" name="id"><br>
+    <input type="submit" value="Get Record">
+</form>
+
+<h2>Post form data</h2>
+
+<form action="http://localhost:5001/musicians" method="post" target="_blank">
+    Name: <input type="text" name="name"><br>
+    Band: <input type="text" name="band"><br>
+    Instrument: <input type="text" name="instrument"><br>
+    <input type="submit" value="Submit">
+</form>
+
+<h2>Update data</h2>
+
+<form action="http://localhost:5001/musicians" method="put" target="_blank">
+    ID : <input type="text" name="_id"><br>
+    Name: <input type="text" name="name"><br>
+    Band: <input type="text" name="band"><br>
+    Instrument: <input type="text" name="instrument"><br>
+    <input type="submit" value="Update">
+</form>
+
+<h2>Delete data</h2>
+
+<form action="http://localhost:5001/musicians" method="delete" target="_blank">
+    ID : <input type="text" name="_id"><br>
+    <input type="submit" value="Delete">
+</form>
+
+</body>
+</html>
