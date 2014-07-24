@@ -20,7 +20,7 @@ exports.add = function(req, res) {
         if (err) return console.log(err);
         return res.send(musician);
     });
-}
+};
 exports.update = function(req, res) {
     var id = req.params.id;
     var updates = req.body;
@@ -31,7 +31,7 @@ exports.update = function(req, res) {
             console.log('Updated %d musicians', numberAffected);
             return res.send(202);
         });
-}
+};
 exports.delete = function(req, res){
     var id = req.params.id;
     Musician.remove({'_id':id},function(result) {

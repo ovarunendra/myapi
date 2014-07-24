@@ -5,8 +5,11 @@ var express = require('express'),
 mongoose = require('mongoose');
 require('./models/musician');
 var app = express();
-require('./routes')(app);
 var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+require('./routes')(app);
+
 var mongoUri = 'mongodb://localhost:27025/noderest';
 mongoose.connect(mongoUri);
 var db = mongoose.connection;
@@ -19,8 +22,7 @@ db.on('error', function () {
 //app.configure(function(){
 //    app.use(express.bodyParser());
 //});
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+
 
 
 app.listen(5001);
